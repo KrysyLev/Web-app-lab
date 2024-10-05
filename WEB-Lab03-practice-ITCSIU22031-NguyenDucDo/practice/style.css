@@ -1,25 +1,27 @@
 h1 {
-    color: darkgreen;
+  color: darkgreen;
 }
 
 body {
-    padding: 1rem;
+  padding: 1rem;
+  font-family: "Poppins", system-ui;
+  font-weight: 600;
+  font-style: normal;
 }
 
 h2 {
-    font-size: 1.5rem;
-    color: darkgreen;
+  font-size: 1.5rem;
+  color: darkgreen;
 }
 
-.fname, .lname, .email, .dob {
-    display: inline-block;
-    width: 100px; /* Width of input fields */
-    margin-bottom: 5px; /* No space between input fields */
-    padding: 5px; /* Adds padding inside the input */
-  }
-  
-  /* To position labels and inputs close together */
+.fname,
+.lname,
+.email,
+.dob {
+  display: inline-block;
+  width: 100px; /* Width of input fields */
+  margin-bottom: 5px; /* No space between input fields */
+  padding: 5px; /* Adds padding inside the input */
+}
 
-  
-
-  
+/* To position labels and inputs close together */
