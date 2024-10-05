@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Equation Solver</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 80px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quadratic Equation Solver</h1>
+    <p>Solve: <strong>ax<sup>2</sup> + bx + c = 0</strong></p>
+    <form id="quadratic-form">
+        <input type="number" id="a" placeholder="a" required> <br>
+        <input type="number" id="b" placeholder="b" required> <br>
+        <input type="number" id="c" placeholder="c" required> <br>
+        <button type="button" onclick="solveQuadratic()">Solve</button>
+    </form>
+    <div class="result" id="result"></div>
+
+    <script>
+        function solveQuadratic() {
+            // Get the values of a, b, and c
+            const a = parseFloat(document.getElementById('a').value);
+            const b = parseFloat(document.getElementById('b').value);
+            const c = parseFloat(document.getElementById('c').value);
+            
+            // Calculate the discriminant (b^2 - 4ac)
+            const discriminant = b * b - 4 * a * c;
+            let result = '';
+
+            if (discriminant > 0) {
+                // Two real and distinct solutions
+                const x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                const x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                result = `Two real solutions: x1 = ${x1.toFixed(2)}, x2 = ${x2.toFixed(2)}`;
+            } else if (discriminant === 0) {
+                // One real solution (double root)
+                const x = -b / (2 * a);
+                result = `One real solution: x = ${x.toFixed(2)}`;
+            } else {
+                // No real solutions (complex/imaginary solutions)
+                const realPart = (-b / (2 * a)).toFixed(2);
+                const imaginaryPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+                result = `No real solutions. Complex solutions: x1 = ${realPart} + ${imaginaryPart}i, x2 = ${realPart} - ${imaginaryPart}i`;
+            }
+
+            // Display the result
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+</html>

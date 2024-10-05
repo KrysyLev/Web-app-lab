@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex1 Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img
+          src="https://hcmiu.edu.vn/wp-content/uploads/2017/08/logo-vector-IU-01.png"
+          alt="IU-logo"
+          width="100px"
+        />
+      </div>
+    </header>
+
+    <main>
+      <form action="index.html" target="_self">
+        <div class="intro">
+          <h1 class>Survey</h1>
+          <p>
+            If you have a moment, we'd appreciate it if you would fill out this
+          </p>
+        </div>
+
+        <div class="form">
+          <div class="Your-info">
+            <h2>Your information</h2>
+            <label for="fname" class="fname">First Name</label>
+            <input type="text" id="fname" />
+            <br />
+            <label for="lname" class="lname">Last Name</label>
+            <input type="text" id="lname" />
+            <br />
+            <label for="email" class="email">Email</label>
+            <input type="email" id="email" />
+            <br />
+            <label for="dob" class="dob">Date of Birth</label>
+            <input type="date" id="dob" />
+          </div>
+
+          <div>
+            <h2>How did you hear about survey</h2>
+            <input type="radio" id="search-engine" name="radio" />
+            <label for="search-engine">Search engine</label>
+            <input type="radio" id="Word-of-mouth" name="radio" />
+            <label for="Word-of-mouth">Word of mouth</label>
+            <input type="radio" id="social-media" name="radio" />
+            <label for="social-media">Social Media</label>
+            <input type="radio" id="Other" name="radio" />
+            <label for="Other">Other</label>
+          </div>
+
+          <div>
+            <h2>
+              Would you like to receive announcements about new CDs and special
+              offers?
+            </h2>
+            <input type="checkbox" id="Yes-like-that" />
+            <label for="Yes-like-that">YES, I'd like that.</label>
+            <br>
+            <br>
+            <input type="checkbox" id="Yes-please-send-me" />
+            <label for="Yes-please-send-me"
+              >YES, please send me email announcements.</label
+            >
+            <br />
+            <br />
+            <label for="contact">Please contact me by:</label>
+            <select name="contact" id="contact">
+              <option value="email-mail">Email or postal mail</option>
+              <option value="email">Email only</option>
+              <option value="mail">Postal mail only</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <button id="btn">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>

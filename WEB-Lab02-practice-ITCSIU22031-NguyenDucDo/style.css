@@ -1,0 +1,30 @@
+body {
+    background-color:rgb(223, 205, 255);
+}
+
+body h2 {
+    font-size: 17px;
+    color: brown;
+}
+
+body header h1 {
+    font-size: 20px;
+    color: brown;
+}
+
+header img {
+    float: left;
+}
+
+a:hover {
+    color: aqua;
+}
+
+footer {
+    text-align: center;
+}
+
+header span {
+    font-size: 20px;
+    text-shadow: 2px 2px red;
+}
